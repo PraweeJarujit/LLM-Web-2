@@ -134,16 +134,16 @@
 </a>
 <div class="flex flex-1 justify-center hidden md:flex">
 <div class="flex items-center gap-1 bg-accent-green-light dark:bg-accent-green-dark p-1 rounded-full shadow-sm">
-<a href="#" class="px-4 py-1 rounded bg-primary text-text-main text-xs font-bold hover:brightness-105 transition-all">Design</a>
-<a href="/checkout" class="px-4 py-1 rounded hover:bg-black/5 dark:hover:bg-white/10 text-text-main dark:text-white text-xs font-medium transition-colors">Review</a>
-<a href="/checkout" class="px-4 py-1 rounded hover:bg-black/5 dark:hover:bg-white/10 text-text-main dark:text-white text-xs font-medium transition-colors">Order</a>
+<a href="#" onclick="alert('เมนูนี้อยู่ระหว่างการพัฒนาครับ'); return false;" class="px-4 py-1 rounded bg-primary text-text-main text-xs font-bold hover:brightness-105 transition-all">Design</a>
+<a href="#" onclick="alert('เมนูนี้อยู่ระหว่างการพัฒนาครับ'); return false;" class="px-4 py-1 rounded hover:bg-black/5 dark:hover:bg-white/10 text-text-main dark:text-white text-xs font-medium transition-colors">Review</a>
+<a href="#" onclick="alert('เมนูนี้อยู่ระหว่างการพัฒนาครับ'); return false;" class="px-4 py-1 rounded hover:bg-black/5 dark:hover:bg-white/10 text-text-main dark:text-white text-xs font-medium transition-colors">Order</a>
 </div>
 </div>
 <div class="flex items-center justify-end gap-4">
 <button id="themeToggle" class="size-10 flex items-center justify-center rounded-lg bg-accent-green-light dark:bg-accent-green-dark text-text-main dark:text-white hover:bg-primary/20 transition-colors">
 <span class="material-symbols-outlined text-[18px]">light_mode</span>
 </button>
-<button class="size-10 flex items-center justify-center rounded-full bg-accent-green-light dark:bg-accent-green-dark text-text-main dark:text-white hover:bg-primary/20 transition-colors">
+<button id="helpBtn" class="size-10 flex items-center justify-center rounded-full bg-accent-green-light dark:bg-accent-green-dark text-text-main dark:text-white hover:bg-primary/20 transition-colors">
 <span class="material-symbols-outlined">help</span>
 </button>
 <a href="/login" class="size-10 flex items-center justify-center rounded-full bg-accent-green-light dark:bg-accent-green-dark text-text-main dark:text-white overflow-hidden border-2 border-primary">
@@ -182,35 +182,31 @@
 </div>
 <div class="p-4 bg-white dark:bg-surface-dark border-t border-[#e7f3e7] dark:border-[#2a4a2a] shrink-0">
 <div class="flex gap-2 mb-3 overflow-x-auto pb-1 no-scrollbar">
-<button type="button" onclick="quickPrompt('เพิ่มชั้นวางของ')" class="chip-btn flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-accent-green-light dark:bg-accent-green-dark px-3 hover:bg-primary/20 transition">
-<span class="material-symbols-outlined text-[18px]">add</span>
-<span class="text-text-main dark:text-white text-xs font-bold">เพิ่มชั้นวาง</span>
+<button type="button" onclick="quickPrompt('อยากได้โต๊ะทำงาน')" class="chip-btn flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-accent-green-light dark:bg-accent-green-dark px-3 hover:bg-primary/20 transition">
+<span class="material-symbols-outlined text-[18px]">desk</span>
+<span class="text-text-main dark:text-white text-xs font-bold">โต๊ะทำงาน</span>
 </button>
-<button type="button" onclick="quickPrompt('ทำให้สูงขึ้น')" class="chip-btn flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-accent-green-light dark:bg-accent-green-dark px-3 hover:bg-primary/20 transition">
-<span class="material-symbols-outlined text-[18px]">height</span>
-<span class="text-text-main dark:text-white text-xs font-bold">ทำให้สูงขึ้น</span>
+<button type="button" onclick="quickPrompt('สร้างชั้นวางหนังสือ')" class="chip-btn flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-accent-green-light dark:bg-accent-green-dark px-3 hover:bg-primary/20 transition">
+<span class="material-symbols-outlined text-[18px]">shelves</span>
+<span class="text-text-main dark:text-white text-xs font-bold">ชั้นวางหนังสือ</span>
 </button>
-<button type="button" onclick="quickPrompt('เพิ่มสีเขียว')" class="chip-btn flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-accent-green-light dark:bg-accent-green-dark px-3 hover:bg-primary/20 transition">
+<button type="button" onclick="quickPrompt('ขอสไตล์มินิมอล')" class="chip-btn flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-accent-green-light dark:bg-accent-green-dark px-3 hover:bg-primary/20 transition">
+<span class="material-symbols-outlined text-[18px]">chair</span>
+<span class="text-text-main dark:text-white text-xs font-bold">สไตล์มินิมอล</span>
+</button>
+<button type="button" onclick="quickPrompt('ใช้โทนสีรุ้ง')" class="chip-btn flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-accent-green-light dark:bg-accent-green-dark px-3 hover:bg-primary/20 transition">
 <span class="material-symbols-outlined text-[18px]">palette</span>
-<span class="text-text-main dark:text-white text-xs font-bold">เพิ่มสีเขียว</span>
+<span class="text-text-main dark:text-white text-xs font-bold">โทนสีรุ้ง</span>
 </button>
-<button type="button" onclick="quickPrompt('Add shelf')" class="chip-btn flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-accent-green-light dark:bg-accent-green-dark px-3 hover:bg-primary/20 transition">
-<span class="material-symbols-outlined text-[18px]">add</span>
-<span class="text-text-main dark:text-white text-xs font-bold">Add shelf</span>
-</button>
-<button type="button" onclick="quickPrompt('Make taller')" class="chip-btn flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-accent-green-light dark:bg-accent-green-dark px-3 hover:bg-primary/20 transition">
-<span class="material-symbols-outlined text-[18px]">height</span>
-<span class="text-text-main dark:text-white text-xs font-bold">Make taller</span>
-</button>
-<button type="button" onclick="quickPrompt('More green')" class="chip-btn flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-accent-green-light dark:bg-accent-green-dark px-3 hover:bg-primary/20 transition">
-<span class="material-symbols-outlined text-[18px]">palette</span>
-<span class="text-text-main dark:text-white text-xs font-bold">More green</span>
+<button type="button" onclick="quickPrompt('ปรับขนาดให้เล็กลง')" class="chip-btn flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-accent-green-light dark:bg-accent-green-dark px-3 hover:bg-primary/20 transition">
+<span class="material-symbols-outlined text-[18px]">compress</span>
+<span class="text-text-main dark:text-white text-xs font-bold">ลดขนาด</span>
 </button>
 </div>
 <div class="relative w-full">
 <input id="chatInput" class="w-full h-12 pl-4 pr-24 rounded-xl bg-accent-green-light dark:bg-accent-green-dark border-none focus:ring-2 focus:ring-primary text-text-main dark:text-white placeholder:text-gray-500" placeholder="พิมพ์คำอธิบายหรือไอเดียใหม่ๆ... / Describe changes or new ideas..." type="text"/>
 <div class="absolute right-1 top-1 h-10 flex items-center gap-1">
-<button class="size-9 flex items-center justify-center rounded-lg text-gray-500 hover:text-primary hover:bg-white/50 dark:hover:bg-white/10 transition-colors">
+<button id="micBtn" class="size-9 flex items-center justify-center rounded-lg text-gray-500 hover:text-primary hover:bg-white/50 dark:hover:bg-white/10 transition-colors">
 <span class="material-symbols-outlined">mic</span>
 </button>
 <button id="sendBtn" class="h-9 px-4 rounded-lg bg-primary text-text-main font-bold text-sm shadow-md hover:brightness-105 transition-all flex items-center gap-2">
@@ -246,34 +242,34 @@
 </div>
 
 <div class="col-span-12 lg:col-span-8 flex flex-col h-full overflow-hidden relative">
-<div class="flex-grow relative bg-[#f0f4f0] dark:bg-[#0d1a0d] overflow-hidden group min-h-[400px]">
-<div class="absolute inset-0 flex items-center justify-center">
-<div class="absolute inset-0 opacity-20 dark:opacity-10 pointer-events-none" style="background-image: radial-gradient(#19e619 1px, transparent 1px); background-size: 24px 24px;"></div>
-<div class="relative w-full h-full flex items-center justify-center">
-<div id="plotlyViewer" class="w-full h-full flex items-center justify-center">
-    <div class="text-center text-gray-500 dark:text-gray-400">
-        <div class="size-16 mx-auto mb-4 rounded-full bg-accent-green-light dark:bg-accent-green-dark flex items-center justify-center text-primary animate-pulse">
-            <span class="material-symbols-outlined text-[32px]">view_in_ar</span>
+<div class="flex-grow relative bg-[#f0f4f0] dark:bg-[#0d1a0d] overflow-hidden group min-h-[40vh] md:min-h-[400px]">
+<div class="absolute inset-0 opacity-20 dark:opacity-10 pointer-events-none z-0" style="background-image: radial-gradient(#19e619 1px, transparent 1px); background-size: 24px 24px;"></div>
+
+<div class="absolute inset-0 w-full h-full z-10">
+    <div id="plotlyLoadingState" class="absolute inset-0 flex items-center justify-center z-10">
+        <div class="text-center text-gray-500 dark:text-gray-400">
+            <div class="size-16 mx-auto mb-4 rounded-full bg-accent-green-light dark:bg-accent-green-dark flex items-center justify-center text-primary animate-pulse">
+                <span class="material-symbols-outlined text-[32px]">view_in_ar</span>
+            </div>
+            <p>รอข้อมูลจาก AI เพื่อสร้างแบบจำลอง 3 มิติ...</p>
         </div>
-        <p>รอข้อมูลจาก AI เพื่อสร้างแบบจำลอง 3 มิติ...</p>
     </div>
-</div>
-</div>
+    <div id="plotlyViewer" class="w-full h-full absolute inset-0 z-20"></div>
 </div>
 
-<div class="absolute top-6 right-6 flex flex-col gap-2">
+<div class="absolute top-6 right-6 flex flex-col gap-2 z-30">
 <button onclick="resetCamera()" class="size-10 bg-white dark:bg-surface-dark shadow-lg rounded-lg flex items-center justify-center text-text-main dark:text-white hover:text-primary transition-colors"><span class="material-symbols-outlined">3d_rotation</span></button>
 <button onclick="zoomIn()" class="size-10 bg-white dark:bg-surface-dark shadow-lg rounded-lg flex items-center justify-center text-text-main dark:text-white hover:text-primary transition-colors"><span class="material-symbols-outlined">add</span></button>
 <button onclick="zoomOut()" class="size-10 bg-white dark:bg-surface-dark shadow-lg rounded-lg flex items-center justify-center text-text-main dark:text-white hover:text-primary transition-colors"><span class="material-symbols-outlined">remove</span></button>
 </div>
-<div class="absolute top-6 left-6 flex gap-1 bg-white/80 dark:bg-surface-dark/80 backdrop-blur-md p-1 rounded-lg shadow-sm">
+<div class="absolute top-6 left-6 flex gap-1 bg-white/80 dark:bg-surface-dark/80 backdrop-blur-md p-1 rounded-lg shadow-sm z-30">
 <button onclick="setViewMode('realistic')" class="px-3 py-1 rounded hover:bg-black/5 dark:hover:bg-white/10 text-text-main dark:text-white text-xs font-bold transition-colors">Realistic</button>
 <button onclick="setViewMode('wireframe')" class="px-3 py-1 rounded hover:bg-black/5 dark:hover:bg-white/10 text-text-main dark:text-white text-xs font-medium transition-colors">Wireframe</button>
 <button onclick="setViewMode('heatmap')" class="px-3 py-1 rounded hover:bg-black/5 dark:hover:bg-white/10 text-text-main dark:text-white text-xs font-medium transition-colors">Heatmap</button>
 </div>
 </div>
 
-<div class="h-auto shrink-0 bg-surface-light dark:bg-surface-dark border-t border-[#e7f3e7] dark:border-[#2a4a2a] p-6 shadow-[0_-4px_20px_rgba(0,0,0,0.05)]">
+<div class="h-auto shrink-0 bg-surface-light dark:bg-surface-dark border-t border-[#e7f3e7] dark:border-[#2a4a2a] p-6 shadow-[0_-4px_20px_rgba(0,0,0,0.05)] relative z-30">
 <div class="flex items-center justify-between mb-4">
 <div class="flex items-center gap-2">
 <span class="material-symbols-outlined text-primary">engineering</span>
@@ -301,8 +297,8 @@
 </div>
 
 <div class="mt-6 flex justify-end gap-4">
-<button class="px-6 py-2.5 rounded-lg border border-[#e7f3e7] dark:border-[#2a4a2a] text-text-main dark:text-white font-bold text-sm hover:bg-gray-50 dark:hover:bg-white/5 transition-colors">Save Draft</button>
-<button class="px-6 py-2.5 rounded-lg bg-primary text-text-main font-bold text-sm shadow-lg shadow-primary/30 hover:shadow-primary/50 hover:-translate-y-0.5 transition-all flex items-center gap-2">Add to Cart <span class="material-symbols-outlined text-[18px]">shopping_cart</span></button>
+<button id="saveDraftBtn" class="px-6 py-2.5 rounded-lg border border-[#e7f3e7] dark:border-[#2a4a2a] text-text-main dark:text-white font-bold text-sm hover:bg-gray-50 dark:hover:bg-white/5 transition-colors">Save Draft</button>
+<button id="addToCartBtn" class="px-6 py-2.5 rounded-lg bg-primary text-text-main font-bold text-sm shadow-lg shadow-primary/30 hover:shadow-primary/50 hover:-translate-y-0.5 transition-all flex items-center gap-2">Add to Cart <span class="material-symbols-outlined text-[18px]">shopping_cart</span></button>
 </div>
 </div>
 </div>
@@ -315,27 +311,81 @@
     const chatInput = document.getElementById('chatInput');
     const sendBtn = document.getElementById('sendBtn');
     const plotlyViewer = document.getElementById('plotlyViewer');
+    const plotlyLoadingState = document.getElementById('plotlyLoadingState');
     const userAvatar = 'https://lh3.googleusercontent.com/aida-public/AB6AXuAYMPl5-1dsuNaf1u1k_T53aQzfbdUbN6awNUN9Ea9a52J4HfaifhPRdb7mJ_7JgwtL2b6MDfYZHyb8RYMY98vntD4A4MzmIJSzdOryX0FMSMMTmbsK0cv93yU_QTaeGS22N0nWCR0LpNRIrtUThe0cTjQxkaJqDKtVYvsvUbTyh7SKhK0vKK6ZbwexMW3mUM_rqKrusE1Ld8t7ubQYOtaNRs6rsuB2VkjJ6oS78pdcLiCFpoHviY5TJ2VssXfdZc87D402g2XExrZ-';
 
-    // Chat History System
     let currentUser = null;
     let currentChatId = null;
     let chatSessions = [];
-    const systemPrompt = `You are BrickBot, an AI assistant for BRICKIT. Help users design furniture.
+    
+    // อัปเดต System Prompt ให้บังคับการสร้าง JSON ใหม่เสมอ
+   const systemPrompt = `You are BrickBot, an AI assistant for BRICKIT. Help users design furniture.
 IMPORTANT: 
 - Always respond in the user's language (Thai, English, or other languages)
 - For Thai users: Use natural, polite Thai language with appropriate particles (ครับ/ค่ะ)
-- Use clear, professional language that's easy to understand
-- Maintain friendly and helpful tone appropriate for furniture design consultation`;
-
+- COLOR LOCK (CRITICAL): You MUST strictly map these color names (English or Thai) to their EXACT hex codes in your JSON:
+  * Red / สีแดง = "#FF0000"
+  * Orange / สีส้ม = "#FF7F00"
+  * Yellow / สีเหลือง = "#FFFF00"
+  * Green / สีเขียว = "#00FF00"
+  * Blue / สีน้ำเงิน / สีฟ้า = "#0000FF"
+  * Indigo / สีคราม = "#4B0082"
+  * Violet / Purple / สีม่วง = "#9400D3"
+  * Black / สีดำ = "#000000"
+  * White / สีขาว = "#FFFFFF"
+  * Gray / สีเทา = "#808080"
+- CRITICAL JSON UPDATE: When the user requests a NEW piece of furniture or changes the details (width, length, height, color, type), you MUST generate a completely NEW JSON configuration. DO NOT reuse previous JSON values. ALWAYS use the latest instructions from the user to build the parameters.`;
     let messages = [{ role: 'system', content: systemPrompt }];
 
-    // Initialize chat system
+    window.downloadModelJSON = function() {
+        const modelData = window.currentModelData;
+        if (!modelData) {
+            alert('No model data available for download');
+            return;
+        }
+
+        try {
+            const downloadData = {
+                ...modelData,
+                downloaded_at: new Date().toISOString(),
+                download_version: "1.0"
+            };
+
+            const jsonString = JSON.stringify(downloadData, null, 2);
+            const blob = new Blob([jsonString], { type: 'application/json' });
+            
+            const url = URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.href = url;
+            
+            const timestamp = new Date().toISOString().replace(/[:.]/g, '-').slice(0, 19);
+            const itemType = (modelData.metadata?.item_type || 'model').replace(/[^a-zA-Z0-9]/g, '_');
+            link.download = `${itemType}_${timestamp}.json`;
+            
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            
+            URL.revokeObjectURL(url);
+            
+            console.log('✅ Model JSON downloaded successfully');
+        } catch (error) {
+            console.error('❌ Error downloading model JSON:', error);
+            alert('Failed to download model JSON. Please try again.');
+        }
+    };
+
     document.addEventListener('DOMContentLoaded', async () => {
         loadUserData();
         loadChatSessions();
         initializeTheme();
         setupEventListeners();
+        
+        window.addEventListener('resize', () => {
+            if (document.querySelector('#plotlyViewer .js-plotly-plot')) {
+                Plotly.Plots.resize('plotlyViewer');
+            }
+        });
         
         if (chatSessions.length === 0) {
             createNewChat();
@@ -397,6 +447,8 @@ IMPORTANT:
         try {
             const response = await callBackendAPI(initialPrompt);
             await typeMessage(bubble, response);
+            
+            // ตรงนี้ไม่เซฟข้อความระบบกลับไปหา AI
             messages.push({ role: 'assistant', content: response });
             saveCurrentMessage('assistant', response);
         } catch (err) { 
@@ -436,7 +488,6 @@ IMPORTANT:
                 }
             } else {
                 const bubble = createBotBubble();
-                // Filter out JSON from history display
                 const jsonRegex = /```json\s*([\s\S]*?)\s*```/;
                 if(jsonRegex.test(msg.content)){
                      let cleanText = msg.content.replace(jsonRegex, '').trim();
@@ -466,7 +517,6 @@ IMPORTANT:
                 session.title = content.substring(0, 30) + (content.length > 30 ? '...' : '');
             }
         } else if (role === 'assistant' && !session.lastMessage) {
-            // Clean JSON from preview
              let cleanText = content.replace(/```json\s*([\s\S]*?)\s*```/, '').trim();
              if(!cleanText) cleanText = "Model generated successfully.";
             session.lastMessage = cleanText.substring(0, 50) + '...';
@@ -588,6 +638,70 @@ IMPORTANT:
         document.getElementById('searchChats').addEventListener('input', updateChatList);
         document.getElementById('exportChatsBtn').addEventListener('click', exportChats);
         
+        document.getElementById('helpBtn').addEventListener('click', () => {
+            alert('คำแนะนำการใช้งาน BrickBot:\\n\\n1. พิมพ์บอก AI ว่าต้องการเฟอร์นิเจอร์แบบไหน (เช่น โต๊ะ เก้าอี้ ชั้นวาง)\\n2. รอ AI ประมวลผลและสร้างแบบจำลอง 3 มิติ\\n3. ใช้เมาส์หมุน ซูม หรือเปลี่ยนมุมมอง 3D ได้ทางหน้าต่างขวา\\n4. สามารถสั่งปรับแก้ได้ตลอดเวลา เช่น "ขอสีฟ้า" หรือ "ทำให้สูงขึ้น"\\n5. กด Save Draft หรือ Add to Cart เมื่อพอใจผลงาน');
+        });
+        
+        const micBtn = document.getElementById('micBtn');
+        if (micBtn) {
+            micBtn.addEventListener('click', function() {
+                const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+                if (SpeechRecognition) {
+                    const recognition = new SpeechRecognition();
+                    recognition.lang = 'th-TH'; 
+                    recognition.continuous = false;
+                    
+                    recognition.onstart = () => {
+                        this.classList.add('text-red-500', 'bg-red-50', 'dark:bg-red-900/20');
+                        chatInput.placeholder = 'กำลังฟังเสียงของคุณ...';
+                    };
+                    
+                    recognition.onresult = (event) => {
+                        const transcript = event.results[0][0].transcript;
+                        chatInput.value += (chatInput.value ? ' ' : '') + transcript;
+                    };
+                    
+                    recognition.onend = () => {
+                        this.classList.remove('text-red-500', 'bg-red-50', 'dark:bg-red-900/20');
+                        chatInput.placeholder = 'พิมพ์คำอธิบายหรือไอเดียใหม่ๆ... / Describe changes or new ideas...';
+                    };
+                    
+                    recognition.start();
+                } else {
+                    alert('ขออภัย เบราว์เซอร์ของคุณไม่รองรับการสั่งงานด้วยเสียงครับ');
+                }
+            });
+        }
+        
+        document.getElementById('saveDraftBtn').addEventListener('click', saveDraft);
+        
+        document.getElementById('addToCartBtn').addEventListener('click', function() {
+            if (!window.currentModelData) {
+                alert('กรุณารอให้ AI สร้างแบบจำลอง 3 มิติให้เสร็จก่อนเพิ่มลงตะกร้านะครับ');
+                return;
+            }
+            
+            const btn = this;
+            const originalText = btn.innerHTML;
+            const originalClasses = btn.className;
+            
+            let cart = JSON.parse(localStorage.getItem('BRICKIT_cart') || '[]');
+            cart.push({
+                id: Date.now(),
+                model: window.currentModelData,
+                date: new Date().toISOString()
+            });
+            localStorage.setItem('BRICKIT_cart', JSON.stringify(cart));
+            
+            btn.innerHTML = 'Added! <span class="material-symbols-outlined text-[18px]">check_circle</span>';
+            btn.className = 'px-6 py-2.5 rounded-lg font-bold text-sm transition-all flex items-center gap-2 bg-green-600 text-white shadow-lg shadow-green-600/30';
+            
+            setTimeout(() => {
+                btn.innerHTML = originalText;
+                btn.className = originalClasses;
+            }, 2000);
+        });
+        
         document.getElementById('chatHistorySidebar').addEventListener('click', (e) => {
             if (e.target.id === 'chatHistorySidebar') closeSidebar();
         });
@@ -599,6 +713,32 @@ IMPORTANT:
                 send(); 
             } 
         });
+    }
+
+    function saveDraft() {
+        if (!window.currentModelData && messages.length <= 1) {
+            alert('ยังไม่มีข้อมูลแบบจำลองหรือบทสนทนาให้บันทึกครับ');
+            return;
+        }
+        
+        const draftData = {
+            model: window.currentModelData,
+            chat: messages,
+            timestamp: new Date().toISOString()
+        };
+        
+        localStorage.setItem('BRICKIT_saved_draft', JSON.stringify(draftData));
+        
+        const btn = document.getElementById('saveDraftBtn');
+        const originalText = btn.innerHTML;
+        
+        btn.innerHTML = 'Saved! <span class="material-symbols-outlined text-[18px]">check</span>';
+        btn.classList.add('text-green-600', 'border-green-600', 'dark:text-green-400', 'dark:border-green-400');
+        
+        setTimeout(() => {
+            btn.innerHTML = originalText;
+            btn.classList.remove('text-green-600', 'border-green-600', 'dark:text-green-400', 'dark:border-green-400');
+        }, 2000);
     }
 
     function openSidebar() {
@@ -711,26 +851,28 @@ IMPORTANT:
 
         try {
             const response = await callBackendAPI(userText);
-            console.log("AI Response Received:", response); // Debugging
+            console.log("AI Response Received:", response);
 
-            // 1. Better Regex to find JSON anywhere in text
             const jsonMatch = response.match(/\{[\s\S]*?"generate_3d"\s*:\s*true[\s\S]*?\}/);
             
+            let finalContentToSave = response;
+
             if (jsonMatch) {
                 console.log("✅ JSON Block Detected!");
                 let parsedData = null;
                 try {
                     parsedData = JSON.parse(jsonMatch[0]);
                     
-                    // 2. Hide JSON from Chat Bubble
                     let cleanText = response.replace(/```json[\s\S]*?```/g, "").replace(jsonMatch[0], "").trim();
                     if (cleanText.length < 5) cleanText = "รับทราบครับ! ผมกำลังสร้างแบบจำลอง 3 มิติให้คุณ โปรดดูที่หน้าจอด้านขวาครับ 🚀";
                     
                     await typeMessage(bubble, cleanText);
 
-                    // 3. Trigger 3D Rendering
                     console.log("🚀 Calling renderGeneratedModel with:", parsedData);
                     renderGeneratedModel(parsedData);
+
+                    // สำคัญที่สุด: เซฟแค่ text เปล่าๆ ไม่เอาโค้ด JSON ส่งให้ประวัติ AI
+                    finalContentToSave = cleanText;
 
                 } catch (e) {
                     console.error("❌ JSON Parse Error:", e);
@@ -741,8 +883,9 @@ IMPORTANT:
                 await typeMessage(bubble, response);
             }
 
-            messages.push({ role: 'assistant', content: response });
-            saveCurrentMessage('assistant', response);
+            // บันทึกลงประวัติเพื่อส่งให้ AI ในตาต่อไป (โดยไม่มี JSON กวนใจ)
+            messages.push({ role: 'assistant', content: finalContentToSave });
+            saveCurrentMessage('assistant', finalContentToSave);
             
         } catch (err) { 
             bubble.textContent = 'ขออภัย ระบบขัดข้องครับ';
@@ -766,20 +909,34 @@ IMPORTANT:
             console.log('📦 Model data received:', modelData);
 
             if (modelData.status === 'success' && modelData.plotly_json) {
-                // Render Plotly Model
-                Plotly.newPlot('plotlyViewer', modelData.plotly_json.data, modelData.plotly_json.layout, {
+                
+                const layoutOverride = {
+                    ...(modelData.plotly_json.layout || {}),
+                    autosize: true,
+                    margin: { l: 0, r: 0, t: 0, b: 0, pad: 0 },
+                    paper_bgcolor: 'rgba(0,0,0,0)',
+                    plot_bgcolor: 'rgba(0,0,0,0)'
+                };
+
+                if(plotlyLoadingState) plotlyLoadingState.style.display = 'none';
+
+                Plotly.newPlot('plotlyViewer', modelData.plotly_json.data, layoutOverride, {
                     responsive: true,
                     displayModeBar: false
+                }).then(() => {
+                    setTimeout(() => {
+                        Plotly.Plots.resize('plotlyViewer');
+                    }, 100);
                 });
 
-                // Update Report
                 updateEngineeringReport(modelData);
             } else {
                 throw new Error(modelData.error || 'Failed to generate model');
             }
         } catch (error) {
             console.error('❌ Error generating 3D model:', error);
-            plotlyViewer.innerHTML = `
+            if(plotlyLoadingState) plotlyLoadingState.style.display = 'flex';
+            plotlyLoadingState.innerHTML = `
                 <div class="text-center text-red-500 dark:text-red-400 p-8">
                     <div class="size-16 mx-auto mb-4 rounded-full bg-red-100 dark:bg-red-900/20 flex items-center justify-center">
                         <span class="material-symbols-outlined text-[32px]">error</span>
@@ -800,7 +957,6 @@ IMPORTANT:
         const colorMix = modelData.color_mix || {};
         const ecoImpact = modelData.eco_impact_kg || 0;
 
-        // 1. Build BOM HTML
         let bomHtml = '<div class="space-y-1 mt-2 max-h-[150px] overflow-y-auto custom-scrollbar pr-2">';
         for (const [brickType, count] of Object.entries(bom)) {
             bomHtml += `
@@ -812,7 +968,6 @@ IMPORTANT:
         }
         bomHtml += '</div>';
 
-        // 2. Build Color Mix HTML
         let colorHtml = '';
         if (colorMix.status === 'success' && colorMix.mix_caps && colorMix.mix_caps.length > 0) {
             colorHtml = '<div class="space-y-2 mt-2">';
@@ -834,12 +989,11 @@ IMPORTANT:
             colorHtml = `<p class="text-xs text-gray-500 mt-2">Using solid color: <br><span class="font-bold" style="color:${modelData.color_hex || '#000'}">${modelData.color_hex || 'Default'}</span></p>`;
         }
 
-        // 3. Download Button HTML
         let downloadHtml = '';
         if (modelData.saved_file || modelData.metadata) {
             downloadHtml = `
                 <div class="mt-4 pt-3 border-t border-gray-200 dark:border-gray-700">
-                    <button onclick="downloadModelJSON()" class="w-full bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-lg flex items-center justify-center gap-2 transition-colors">
+                    <button onclick="window.downloadModelJSON()" class="w-full bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-lg flex items-center justify-center gap-2 transition-colors">
                         <span class="material-symbols-outlined text-[18px]">download</span>
                         <span class="text-sm font-medium">Download Model JSON</span>
                     </button>
@@ -847,7 +1001,6 @@ IMPORTANT:
             `;
         }
 
-        // 4. Inject HTML
         reportContent.innerHTML = `
             <div class="bg-background-light dark:bg-background-dark rounded-xl p-4 border border-[#e7f3e7] dark:border-[#2a4a2a] flex flex-col gap-1">
                 <div class="flex items-center justify-between"><h4 class="text-sm font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider">Bill of Materials</h4><span class="material-symbols-outlined text-gray-400 text-sm">inventory_2</span></div>
@@ -879,54 +1032,7 @@ IMPORTANT:
             ${downloadHtml}
         `;
 
-        // Store model data globally for download
         window.currentModelData = modelData;
-    }
-
-    function downloadModelJSON() {
-        const modelData = window.currentModelData;
-        if (!modelData) {
-            alert('No model data available for download');
-            return;
-        }
-
-        try {
-            // Create a clean copy of the data for download
-            const downloadData = {
-                ...modelData,
-                downloaded_at: new Date().toISOString(),
-                download_version: "1.0"
-            };
-
-            // Convert to JSON string
-            const jsonString = JSON.stringify(downloadData, null, 2);
-            
-            // Create blob
-            const blob = new Blob([jsonString], { type: 'application/json' });
-            
-            // Create download link
-            const url = URL.createObjectURL(blob);
-            const link = document.createElement('a');
-            link.href = url;
-            
-            // Generate filename
-            const timestamp = new Date().toISOString().replace(/[:.]/g, '-').slice(0, 19);
-            const itemType = (modelData.metadata?.item_type || 'model').replace(/[^a-zA-Z0-9]/g, '_');
-            link.download = `${itemType}_${timestamp}.json`;
-            
-            // Trigger download
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-            
-            // Clean up
-            URL.revokeObjectURL(url);
-            
-            console.log('✅ Model JSON downloaded successfully');
-        } catch (error) {
-            console.error('❌ Error downloading model JSON:', error);
-            alert('Failed to download model JSON. Please try again.');
-        }
     }
 
     async function typeMessage(element, text) {
@@ -935,17 +1041,16 @@ IMPORTANT:
         for (let i = 0; i < words.length; i++) {
             element.textContent += (i > 0 ? ' ' : '') + words[i];
             chatHistory.scrollTop = chatHistory.scrollHeight;
-            await new Promise(resolve => setTimeout(resolve, 20)); // Sped up slightly
+            await new Promise(resolve => setTimeout(resolve, 20)); 
         }
     }
 
-    // --- 3D VIEW CONTROLS (GLOBAL FUNCTIONS) ---
     window.setViewMode = function(mode) {
         if (!document.querySelector('#plotlyViewer .js-plotly-plot')) return;
         let update = {};
         if (mode === 'realistic') update = {opacity: 1.0};
-        if (mode === 'wireframe') update = {opacity: 0.1}; // Makes faces almost transparent, edges remain
-        if (mode === 'heatmap') update = {opacity: 0.7}; // Semi-transparent
+        if (mode === 'wireframe') update = {opacity: 0.1}; 
+        if (mode === 'heatmap') update = {opacity: 0.7}; 
         Plotly.restyle('plotlyViewer', update);
     };
 
